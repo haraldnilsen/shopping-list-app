@@ -7,11 +7,8 @@ export const ToDoContainer = styled.View`
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
-  background-color: red;
-  border: 2px solid black;
-  font-family: "Roboto-Regular";
 `;
 
 export const ToDoText = styled.Text`
-  font-size: 20px;
+  font-size: 30px;
 `;

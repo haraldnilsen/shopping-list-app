@@ -21,7 +21,13 @@ import {
 import React from "react";
 
 const HomeScreen = ({ navigation }: any) => {
-  const [shoppingList, setShoppingList] = useState<string[]>([]);
+  const [shoppingList, setShoppingList] = useState<string[]>([
+    "Brød",
+    "Melk",
+    "Egg",
+    "Kjøttdeig",
+    "Kylling",
+  ]);
   const [shoppingItem, setShoppingItem] = useState("");
 
   const addItemHandler = () => {

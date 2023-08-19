@@ -9,6 +9,7 @@ export const HomeContainer = styled.View`
 
 export const ListContainer = styled.View`
   flex: 1;
+  padding-top: 20px;
 `;
 
 export const ListInputContainer = styled.View`
