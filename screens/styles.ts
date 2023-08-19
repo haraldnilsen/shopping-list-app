@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { StyleSheet } from "react-native";
 
 export const HomeContainer = styled.View`
   display: flex;
@@ -20,6 +21,23 @@ export const ListInputContainer = styled.View`
 `;
 
 export const ListInput = styled.View`
-  width: 80%;
   border: 2px solid black;
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
 `;
+
+export const ListInputButton = styled.Button`
+  width: 20%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const styles = StyleSheet.create({
+  listInputButton: {
+    borderRadius: 10,
+    marginLeft: 10,
+  },
+});
