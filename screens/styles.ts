@@ -21,15 +21,19 @@ export const ListInputContainer = styled.View`
   justify-content: center;
 `;
 
-export const ListInput = styled.View`
+export const ListInput = styled.TextInput`
   border: 2px solid black;
   width: 80%;
   padding: 10px;
   border-radius: 10px;
+  &:focus {
+    border: 2px solid red;
+    background-color: red;
+  }
 `;
 
 export const ListInputButton = styled.Button`
-  width: 20%;
+  padding-left: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -40,5 +44,7 @@ export const styles = StyleSheet.create({
   listInputButton: {
     borderRadius: 10,
     marginLeft: 10,
+    paddingLeft: 15,
+    backgroundColor: "#C62015",
   },
 });

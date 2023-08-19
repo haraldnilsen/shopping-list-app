@@ -49,13 +49,11 @@ const HomeScreen = ({ navigation }: any) => {
             ))}
           </ListContainer>
           <ListInputContainer>
-            <ListInput>
-              <TextInput
-                value={shoppingItem}
-                onChangeText={(text) => setShoppingItem(text)}
-                onSubmitEditing={addItemHandler}
-              />
-            </ListInput>
+            <ListInput
+              value={shoppingItem}
+              onChangeText={(text) => setShoppingItem(text)}
+              onSubmitEditing={addItemHandler}
+            />
             <Button style={styles.listInputButton} onPress={addItemHandler}>
               +
             </Button>

@@ -66,6 +66,7 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => {
         isChecked={checked}
         onPress={() => handleChecked(!checked)}
         disableBuiltInState
+        fillColor="#C62015"
       />
       <View ref={ref}>
         <ToDoText style={{ fontFamily: "custom-font" }}>{item}</ToDoText>
