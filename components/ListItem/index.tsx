@@ -40,9 +40,10 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => {
   };
 
   const animateStrike = () => {
+    animatedValue.setValue(0);
     Animated.timing(animatedValue, {
       toValue: 1,
-      duration: 1000,
+      duration: 100,
       easing: Easing.linear,
       useNativeDriver: false,
     }).start();
@@ -59,8 +60,13 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => {
   }
 
   return (
-    <ToDoContainer>
-      <BouncyCheckbox size={25} onPress={() => handleChecked(!checked)} />
+    <ToDoContainer onPress={() => handleChecked(!checked)}>
+      <BouncyCheckbox
+        size={25}
+        isChecked={checked}
+        onPress={() => handleChecked(!checked)}
+        disableBuiltInState
+      />
       <View ref={ref}>
         <ToDoText style={{ fontFamily: "custom-font" }}>{item}</ToDoText>
         {checked && (
@@ -70,7 +76,7 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => {
               top: textHeight / 2 + 1,
               position: "absolute",
               height: 2,
-              backgroundColor: "black",
+              backgroundColor: "#555555",
             }}
           />
         )}
