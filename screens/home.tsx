@@ -32,6 +32,9 @@ const HomeScreen = ({ navigation }: any) => {
   const [shoppingItem, setShoppingItem] = useState("");
 
   const addItemHandler = () => {
+    if (shoppingItem === "") {
+      return;
+    }
     setShoppingList((shoppingList) => [...shoppingList, shoppingItem]);
     setShoppingItem("");
   };

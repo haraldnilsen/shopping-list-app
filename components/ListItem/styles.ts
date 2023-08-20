@@ -3,13 +3,18 @@ import styled from "styled-components/native";
 export const ToDoContainer = styled.Pressable`
   display: flex;
   flex-direction: row;
-  padding-left: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-bottom: 14px;
+  align-items: center;
+`;
+
+export const ToDoItem = styled.Pressable`
+  display: flex;
+  flex-direction: row;
   align-items: center;
 `;
 
 export const ToDoText = styled.Text`
   color: #555555;
-  font-size: 30px;
+  font-size: 23px;
 `;

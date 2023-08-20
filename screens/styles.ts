@@ -10,7 +10,7 @@ export const HomeContainer = styled.View`
 
 export const ListContainer = styled.View`
   flex: 1;
-  padding-top: 20px;
+  padding-top: 25px;
 `;
 
 export const ListInputContainer = styled.View`
