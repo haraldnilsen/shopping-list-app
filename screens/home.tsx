@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { NativeBaseProvider, Button } from "native-base";
 import ListItem from "../components/ListItem";
+import Header from "../components/Header";
 import { useState } from "react";
 import {
   styles,
@@ -35,14 +36,19 @@ const HomeScreen = ({ navigation }: any) => {
     setShoppingItem("");
   };
 
+  const newItemHandler = () => {
+    setShoppingList([]);
+  };
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      keyboardVerticalOffset={110}
+      keyboardVerticalOffset={30}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <HomeContainer>
+          <Header />
           <ListContainer>
             {shoppingList.map((listItem) => (
               <ListItem item={listItem} />

@@ -5,6 +5,7 @@ export const HomeContainer = styled.View`
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: white;
 `;
 
 export const ListContainer = styled.View`

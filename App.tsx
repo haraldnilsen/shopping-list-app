@@ -18,7 +18,7 @@ export default function App() {
           <Stack.Navigator
             screenOptions={{
               header: (props) => (
-                <View style={{ height: 100 }}>
+                <View style={{ height: 80 }}>
                   <View
                     style={{
                       display: "flex",
@@ -26,7 +26,7 @@ export default function App() {
                       justifyContent: "space-between",
                       paddingLeft: 40,
                       paddingRight: 40,
-                      paddingTop: 20,
+                      paddingTop: 10,
                     }}
                   >
                     <Menu />
@@ -35,7 +35,7 @@ export default function App() {
                   <Text
                     style={{
                       textAlign: "center",
-                      fontSize: 30,
+                      fontSize: 25,
                       color: "#C62015",
                     }}
                   >
@@ -45,7 +45,11 @@ export default function App() {
               ),
             }}
           >
-            <Stack.Screen name="Handlelista" component={HomeScreen} />
+            <Stack.Screen
+              name="Handlelista"
+              component={HomeScreen}
+              options={{ headerShown: false }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>
