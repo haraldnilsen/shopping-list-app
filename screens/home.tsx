@@ -39,7 +39,7 @@ const HomeScreen = ({ navigation }: any) => {
     <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      keyboardVerticalOffset={70}
+      keyboardVerticalOffset={110}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <HomeContainer>
