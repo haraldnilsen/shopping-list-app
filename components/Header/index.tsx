@@ -4,26 +4,22 @@ import React from "react";
 import Menu from "../../assets/menu";
 import Plus from "../../assets/plus";
 
-const Header = () => {
+interface HeaderProps {
+  newItemHandler?: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ newItemHandler }) => {
   return (
     <HeaderContainer style={{ height: 90 }}>
       <HeaderIconsView>
         <Pressable>
           <Menu />
         </Pressable>
-        <Pressable>
+        <Pressable onPress={newItemHandler}>
           <Plus />
         </Pressable>
       </HeaderIconsView>
-      <HeaderTitleText
-        style={{
-          textAlign: "center",
-          fontSize: 25,
-          color: "#C62015",
-        }}
-      >
-        Handlelista
-      </HeaderTitleText>
+      <HeaderTitleText>Handlelista</HeaderTitleText>
     </HeaderContainer>
   );
 };

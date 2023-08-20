@@ -9,13 +9,13 @@ export const HeaderIconsView = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 20px;
 `;
 
 export const HeaderTitleText = styled.Text`
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   color: "#C62015";
 `;

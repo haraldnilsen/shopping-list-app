@@ -48,7 +48,7 @@ const HomeScreen = ({ navigation }: any) => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <HomeContainer>
-          <Header />
+          <Header {...{ newItemHandler }} />
           <ListContainer>
             {shoppingList.map((listItem) => (
               <ListItem item={listItem} />
