@@ -3,11 +3,8 @@ import React from "react";
 import { StyleSheet, SafeAreaView, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./screens/home";
+import HomeScreen from "./screens/home/home";
 import { NativeBaseProvider } from "native-base";
-import Menu from "./assets/menu";
-import Plus from "./assets/plus";
 
 const Drawer = createDrawerNavigator();
 
@@ -22,6 +19,7 @@ export default function App() {
               component={HomeScreen}
               options={{ headerShown: false }}
             />
+            <Drawer.Screen name=""
           </Drawer.Navigator>
         </NavigationContainer>
       </SafeAreaView>

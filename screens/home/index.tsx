@@ -9,8 +9,8 @@ import {
   Keyboard,
 } from "react-native";
 import { NativeBaseProvider, Button } from "native-base";
-import ListItem from "../components/ListItem";
-import Header from "../components/Header";
+import ListItem from "../../components/ListItem";
+import Header from "../../components/Header";
 import { useState } from "react";
 import {
   styles,
