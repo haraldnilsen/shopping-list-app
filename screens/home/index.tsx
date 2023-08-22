@@ -18,10 +18,17 @@ import {
   ListContainer,
   ListInput,
   ListInputContainer,
+  EmptyListContainer,
+  EmptyListText,
 } from "./styles";
 import React from "react";
+import { HomeScreenNavigationProp } from "../../types/navigation";
 
-const HomeScreen = ({ navigation }: any) => {
+type HomeScreenProps = {
+  navigation: HomeScreenNavigationProp;
+};
+
+const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const [shoppingList, setShoppingList] = useState<string[]>([
     "Brød",
     "Melk",
@@ -43,6 +50,12 @@ const HomeScreen = ({ navigation }: any) => {
     setShoppingList([]);
   };
 
+  const removeItemHandler = (item: string) => {
+    setShoppingList((shoppingList) =>
+      shoppingList.filter((listItem) => listItem !== item)
+    );
+  };
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -51,12 +64,24 @@ const HomeScreen = ({ navigation }: any) => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <HomeContainer>
-          <Header {...{ newItemHandler }} />
-          <ListContainer>
-            {shoppingList.map((listItem) => (
-              <ListItem item={listItem} />
-            ))}
-          </ListContainer>
+          <Header {...{ newItemHandler, navigation }} />
+          {shoppingList.length > 0 ? (
+            <ListContainer>
+              {shoppingList.map((listItem) => (
+                <ListItem
+                  item={listItem}
+                  removeItemHandler={removeItemHandler}
+                />
+              ))}
+            </ListContainer>
+          ) : (
+            <EmptyListContainer>
+              <EmptyListText>
+                Handlelisten din er tom! Start en ny handleliste ved å skrive
+                inn en ny ting under 👇
+              </EmptyListText>
+            </EmptyListContainer>
+          )}
           <ListInputContainer>
             <ListInput
               value={shoppingItem}

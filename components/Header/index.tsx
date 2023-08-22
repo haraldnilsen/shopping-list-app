@@ -3,16 +3,21 @@ import { HeaderIconsView, HeaderTitleText, HeaderContainer } from "./styles";
 import React from "react";
 import Menu from "../../assets/menu";
 import Plus from "../../assets/plus";
+import { HomeScreenNavigationProp } from "../../types/navigation";
 
 interface HeaderProps {
   newItemHandler?: () => void;
+  navigation: HomeScreenNavigationProp;
 }
 
-const Header: React.FC<HeaderProps> = ({ newItemHandler }) => {
+const Header: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
   return (
     <HeaderContainer style={{ height: 90 }}>
       <HeaderIconsView>
-        <Pressable>
+        <Pressable
+          style={{ backgroundColor: "red", width: 40, height: 40 }}
+          onPress={navigation?.openDrawer}
+        >
           <Menu />
         </Pressable>
         <Pressable onPress={newItemHandler}>

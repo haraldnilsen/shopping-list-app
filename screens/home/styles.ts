@@ -13,6 +13,21 @@ export const ListContainer = styled.View`
   padding-top: 25px;
 `;
 
+export const EmptyListContainer = styled.View`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  padding: 95px;
+  margin-bottom: 200px;
+`;
+
+export const EmptyListText = styled.Text`
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 40px;
+`;
+
 export const ListInputContainer = styled.View`
   margin-bottom: 50px;
   margin-left: 50px;
@@ -27,10 +42,6 @@ export const ListInput = styled.TextInput`
   width: 80%;
   padding: 10px;
   border-radius: 10px;
-  &:focus {
-    border: 2px solid red;
-    background-color: red;
-  }
 `;
 
 export const ListInputButton = styled.Button`

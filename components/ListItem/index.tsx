@@ -6,7 +6,7 @@ import * as Font from "expo-font";
 
 interface ListItemProps {
   item: string;
-  removeItemHandler: () => void;
+  removeItemHandler: (item: string) => void;
 }
 
 const ListItem: React.FC<ListItemProps> = ({ item, removeItemHandler }) => {
