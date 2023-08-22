@@ -3,10 +3,11 @@ import React from "react";
 import { StyleSheet, SafeAreaView, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeScreen from "./screens/home/home";
+import { Home, Lists } from "./screens";
+import type { RootDrawerParamList } from "./types/navigation";
 import { NativeBaseProvider } from "native-base";
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
 export default function App() {
   return (
@@ -15,11 +16,15 @@ export default function App() {
         <NavigationContainer>
           <Drawer.Navigator>
             <Drawer.Screen
-              name="Handlelista"
-              component={HomeScreen}
+              name="Home"
+              component={Home}
               options={{ headerShown: false }}
             />
-            <Drawer.Screen name=""
+            <Drawer.Screen
+              name="Lists"
+              component={Lists}
+              options={{ headerShown: false }}
+            />
           </Drawer.Navigator>
         </NavigationContainer>
       </SafeAreaView>
