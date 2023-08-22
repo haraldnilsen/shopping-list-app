@@ -29,34 +29,26 @@ export const EmptyListText = styled.Text`
 `;
 
 export const ListInputContainer = styled.View`
-  margin-bottom: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 `;
 
 export const ListInput = styled.TextInput`
-  border: 2px solid black;
+  border: 2px solid #c62015;
   width: 80%;
+  height: 60px;
   padding: 10px;
-  border-radius: 10px;
-`;
-
-export const ListInputButton = styled.Button`
-  padding-left: 10px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 15px 0px 0px 15px;
 `;
 
 export const styles = StyleSheet.create({
   listInputButton: {
-    borderRadius: 10,
-    marginLeft: 10,
-    paddingLeft: 15,
+    borderRadius: 15,
+    borderBottomLeftRadius: 0,
+    borderTopLeftRadius: 0,
+    paddingLeft: 25,
+    paddingRight: 25,
     backgroundColor: "#C62015",
   },
 });

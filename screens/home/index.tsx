@@ -60,7 +60,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
     <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      keyboardVerticalOffset={30}
+      keyboardVerticalOffset={60}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <HomeContainer>
@@ -86,7 +86,9 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
             <ListInput
               value={shoppingItem}
               onChangeText={(text) => setShoppingItem(text)}
-              onSubmitEditing={addItemHandler}
+              onSubmitEditing={() => addItemHandler()}
+              blurOnSubmit={false}
+              placeholder="Skriv inn en ny ting å handle"
             />
             <Button style={styles.listInputButton} onPress={addItemHandler}>
               +
