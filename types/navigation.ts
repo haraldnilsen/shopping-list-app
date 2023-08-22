@@ -1,8 +1,9 @@
 import { DrawerNavigationProp } from "@react-navigation/drawer";
+import { MMKVInstance } from "react-native-mmkv-storage";
 
 export type RootDrawerParamList = {
-  Home: undefined;
-  Lists: undefined;
+  Home: { localStorage: MMKVInstance };
+  Lists: { localStorage: MMKVInstance };
 };
 
 export type HomeScreenNavigationProp = DrawerNavigationProp<

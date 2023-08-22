@@ -6,8 +6,10 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Home, Lists } from "./screens";
 import type { RootDrawerParamList } from "./types/navigation";
 import { NativeBaseProvider } from "native-base";
+import { MMKVLoader } from "react-native-mmkv-storage";
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
+const MMKV = new MMKVLoader().initialize();
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
               name="Home"
               component={Home}
               options={{ headerShown: false }}
+              initialParams={{ localStorage: MMKV }}
             />
             <Drawer.Screen
               name="Lists"

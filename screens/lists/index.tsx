@@ -5,8 +5,14 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
+import { ListsScreenNavigationProp } from "../../types/navigation";
+import { MMKVInstance } from "react-native-mmkv-storage";
 
-const Lists = ({ navigation }: any) => {
+type ListsScreenProps = {
+  navigation: ListsScreenNavigationProp;
+};
+
+const Lists = ({ navigation }: ListsScreenProps) => {
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
