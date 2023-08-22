@@ -15,36 +15,7 @@ export default function App() {
     <NativeBaseProvider>
       <SafeAreaView style={styles.container}>
         <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              header: (props) => (
-                <View style={{ height: 80 }}>
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      paddingLeft: 40,
-                      paddingRight: 40,
-                      paddingTop: 10,
-                    }}
-                  >
-                    <Menu />
-                    <Plus />
-                  </View>
-                  <Text
-                    style={{
-                      textAlign: "center",
-                      fontSize: 25,
-                      color: "#C62015",
-                    }}
-                  >
-                    Handlelista
-                  </Text>
-                </View>
-              ),
-            }}
-          >
+          <Stack.Navigator>
             <Stack.Screen
               name="Handlelista"
               component={HomeScreen}

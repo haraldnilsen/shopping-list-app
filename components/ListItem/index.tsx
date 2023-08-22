@@ -6,9 +6,10 @@ import * as Font from "expo-font";
 
 interface ListItemProps {
   item: string;
+  removeItemHandler: () => void;
 }
 
-const ListItem: React.FC<ListItemProps> = ({ item }) => {
+const ListItem: React.FC<ListItemProps> = ({ item, removeItemHandler }) => {
   const [fontLoaded, setFontLoaded] = useState(false);
   const [textWidth, setTextWidth] = useState(0);
   const [textHeight, setTextHeight] = useState(0);
