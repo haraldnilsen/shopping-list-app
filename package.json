@@ -20,7 +20,7 @@
     "native-base": "^3.4.28",
     "pretty-format": "^29.6.2",
     "react": "18.2.0",
-    "react-native": "0.72.4",
+    "react-native": "0.72.3",
     "react-native-bouncy-checkbox": "^3.0.7",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-mmkv-storage": "^0.9.1",

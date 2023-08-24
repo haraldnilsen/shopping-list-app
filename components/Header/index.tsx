@@ -20,11 +20,11 @@ const Header: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
         >
           <Menu />
         </Pressable>
-        <HeaderTitleText>Handlelista</HeaderTitleText>
         <Pressable onPress={newItemHandler}>
           <Plus />
         </Pressable>
       </HeaderIconsView>
+      <HeaderTitleText>Handlelista</HeaderTitleText>
     </HeaderContainer>
   );
 };
