@@ -6,7 +6,6 @@ import {
   Keyboard,
 } from "react-native";
 import { ListsScreenNavigationProp } from "../../types/navigation";
-import { MMKVInstance } from "react-native-mmkv-storage";
 
 type ListsScreenProps = {
   navigation: ListsScreenNavigationProp;

@@ -17,5 +17,6 @@ export const HeaderIconsView = styled.View`
 export const HeaderTitleText = styled.Text`
   text-align: center;
   font-size: 25px;
-  color: "#C62015";
+  color: #c62015;
+  padding-top: 20px;
 `;

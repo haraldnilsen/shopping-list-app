@@ -39,8 +39,8 @@ export const ListInputContainer = styled.View`
 
 export const ListInput = styled.TextInput`
   border: 2px solid black;
-  width: 80%;
-  padding: 10px;
+  width: 100%;
+  padding: 15px;
   border-radius: 10px;
 `;
 

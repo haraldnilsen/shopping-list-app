@@ -23,14 +23,12 @@ import {
 } from "./styles";
 import React from "react";
 import { HomeScreenNavigationProp } from "../../types/navigation";
-import { MMKVInstance } from "react-native-mmkv-storage";
 
 type HomeScreenProps = {
-  route: HomeScreenNavigationProp;
   navigation: HomeScreenNavigationProp;
 };
 
-const HomeScreen = ({ route, navigation }: HomeScreenProps) => {
+const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const [shoppingList, setShoppingList] = useState<string[]>([
     "Brød",
     "Melk",
@@ -39,9 +37,6 @@ const HomeScreen = ({ route, navigation }: HomeScreenProps) => {
     "Kylling",
   ]);
   const [shoppingItem, setShoppingItem] = useState("");
-
-  // get params passed from App.tsx
-  const { localStorage } = navigation.
 
   const addItemHandler = () => {
     if (shoppingItem === "") {
@@ -92,6 +87,8 @@ const HomeScreen = ({ route, navigation }: HomeScreenProps) => {
               value={shoppingItem}
               onChangeText={(text) => setShoppingItem(text)}
               onSubmitEditing={addItemHandler}
+              blurOnSubmit={false}
+              placeholder="Skriv inn en ny ting..."
             />
             <Button style={styles.listInputButton} onPress={addItemHandler}>
               +

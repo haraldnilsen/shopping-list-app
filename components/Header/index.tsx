@@ -15,16 +15,16 @@ const Header: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
     <HeaderContainer style={{ height: 90 }}>
       <HeaderIconsView>
         <Pressable
-          style={{ backgroundColor: "red", width: 40, height: 40 }}
+          style={{ width: 40, height: 40 }}
           onPress={navigation?.openDrawer}
         >
           <Menu />
         </Pressable>
+        <HeaderTitleText>Handlelista</HeaderTitleText>
         <Pressable onPress={newItemHandler}>
           <Plus />
         </Pressable>
       </HeaderIconsView>
-      <HeaderTitleText>Handlelista</HeaderTitleText>
     </HeaderContainer>
   );
 };
