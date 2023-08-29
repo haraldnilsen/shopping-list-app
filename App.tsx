@@ -6,6 +6,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Home, Lists } from "./screens";
 import type { RootDrawerParamList } from "./types/navigation";
 import { NativeBaseProvider } from "native-base";
+import { storage } from "./utils/storage";
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 

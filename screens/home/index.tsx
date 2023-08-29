@@ -23,9 +23,11 @@ import {
 } from "./styles";
 import React from "react";
 import { HomeScreenNavigationProp } from "../../types/navigation";
+import { MMKV } from "react-native-mmkv";
 
 type HomeScreenProps = {
   navigation: HomeScreenNavigationProp;
+  storage: MMKV;
 };
 
 const HomeScreen = ({ navigation }: HomeScreenProps) => {

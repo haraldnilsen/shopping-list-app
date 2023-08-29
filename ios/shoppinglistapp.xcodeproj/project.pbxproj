@@ -26,6 +26,7 @@
 		7F10F07ADE334165800671D2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3E5FF591F49486CBB45CB4F /* Roboto-Regular.ttf */; };
 		A3DDE5BBAA314D99B558772D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80333015F98C4D36A4351D6D /* Roboto-Thin.ttf */; };
 		4A60707E8BC84B67ADDB420B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7EF82C2165747DD98CEB542 /* Roboto-ThinItalic.ttf */; };
+		35678ED12B0440BCB77D589D /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781212192754A20B141A360 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		E3E5FF591F49486CBB45CB4F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		80333015F98C4D36A4351D6D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C7EF82C2165747DD98CEB542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../assets/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1781212192754A20B141A360 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "shoppinglistapp/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		C7410B5D6A4940718DFAC515 /* shoppinglistapp-Bridging-Header.h */ = {isa = PBXFileReference; name = "shoppinglistapp-Bridging-Header.h"; path = "shoppinglistapp/shoppinglistapp-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				1781212192754A20B141A360 /* noop-file.swift */,
+				C7410B5D6A4940718DFAC515 /* shoppinglistapp-Bridging-Header.h */,
 			);
 			name = shoppinglistapp;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				7F10F07ADE334165800671D2 /* Roboto-Regular.ttf in Resources */,
 				A3DDE5BBAA314D99B558772D /* Roboto-Thin.ttf in Resources */,
 				4A60707E8BC84B67ADDB420B /* Roboto-ThinItalic.ttf in Resources */,
+				6D03721BB2E140B4A33BBCF9 /* shoppinglistapp-Bridging-Header.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +350,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				35678ED12B0440BCB77D589D /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,11 +378,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.shoppinglistapp;
-				PRODUCT_NAME = shoppinglistapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.shoppinglistapp";
+				PRODUCT_NAME = "shoppinglistapp";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = shoppinglistapp/shoppinglistapp-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = shoppinglistapp/shoppinglistapp.entitlements;
 			};
 			name = Debug;
 		};
@@ -395,10 +405,13 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.shoppinglistapp;
-				PRODUCT_NAME = shoppinglistapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.shoppinglistapp";
+				PRODUCT_NAME = "shoppinglistapp";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = shoppinglistapp/shoppinglistapp-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = shoppinglistapp/shoppinglistapp.entitlements;
 			};
 			name = Release;
 		};

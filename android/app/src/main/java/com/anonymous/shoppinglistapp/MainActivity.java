@@ -1,4 +1,4 @@
-package com.shoppinglistapp;
+package com.anonymous.shoppinglistapp;
 
 import android.os.Build;
 import android.os.Bundle;

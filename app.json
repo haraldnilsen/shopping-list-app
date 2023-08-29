@@ -5,7 +5,13 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.anonymous.shoppinglistapp"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.shoppinglistapp"
+    }
   },
   "name": "shopping-list-app"
 }
