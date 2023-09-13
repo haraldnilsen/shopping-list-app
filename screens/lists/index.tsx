@@ -24,6 +24,7 @@ const Lists = ({ navigation }: ListsScreenProps) => {
       console.log(data);
       const list = await getData(data[0]);
       console.log(list);
+      console.log(list);
     };
     getDataFromStorage();
   }, []);
