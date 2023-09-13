@@ -14,7 +14,7 @@ import Header from "../../components/Header";
 import { useState } from "react";
 import {
   styles,
-  HomeContainer,
+  HomeViewContainer,
   ListContainer,
   ListInput,
   ListInputContainer,
@@ -23,11 +23,10 @@ import {
 } from "./styles";
 import React from "react";
 import { HomeScreenNavigationProp } from "../../types/navigation";
-import { MMKV } from "react-native-mmkv";
+import { storeData, getData } from "../../utils/storage";
 
 type HomeScreenProps = {
   navigation: HomeScreenNavigationProp;
-  storage: MMKV;
 };
 
 const HomeScreen = ({ navigation }: HomeScreenProps) => {
@@ -49,6 +48,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
   };
 
   const newItemHandler = () => {
+    storeData("shoppingList" + Date.now(), shoppingList);
     setShoppingList([]);
   };
 
@@ -65,7 +65,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
       keyboardVerticalOffset={30}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <HomeContainer>
+        <HomeViewContainer>
           <Header {...{ newItemHandler, navigation }} />
           {shoppingList.length > 0 ? (
             <ListContainer>
@@ -96,7 +96,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
               +
             </Button>
           </ListInputContainer>
-        </HomeContainer>
+        </HomeViewContainer>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
   );

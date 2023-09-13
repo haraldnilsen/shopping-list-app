@@ -4,11 +4,9 @@ import { StyleSheet, SafeAreaView, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Home, Lists } from "./screens";
-import type { RootDrawerParamList } from "./types/navigation";
 import { NativeBaseProvider } from "native-base";
-import { storage } from "./utils/storage";
 
-const Drawer = createDrawerNavigator<RootDrawerParamList>();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (

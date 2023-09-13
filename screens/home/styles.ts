@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import { StyleSheet } from "react-native";
 
-export const HomeContainer = styled.View`
+export const HomeViewContainer = styled.View`
   display: flex;
   flex-direction: column;
   flex: 1;
