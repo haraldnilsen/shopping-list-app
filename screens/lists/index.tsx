@@ -5,6 +5,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   Text,
+  FlatList,
 } from "react-native";
 import { ListsScreenNavigationProp } from "../../types/navigation";
 import { View } from "native-base";
@@ -16,15 +17,17 @@ type ListsScreenProps = {
 };
 
 const Lists = ({ navigation }: ListsScreenProps) => {
-  const [shoppingLists, setShoppingLists] = useState<string[]>([]);
+  const [shoppingLists, setShoppingLists] = useState<string[][]>([]);
 
   useEffect(() => {
     const getDataFromStorage = async () => {
       const data = await getAllKeys();
-      console.log(data);
-      const list = await getData(data[0]);
-      console.log(list);
-      console.log(list);
+      if (data) {
+        for (let i = 0; i < data.length; i++) {
+          const list = await getData(data[i]);
+          setShoppingLists((shoppingLists) => shoppingLists.concat([list]));
+        }
+      }
     };
     getDataFromStorage();
   }, []);
@@ -37,7 +40,13 @@ const Lists = ({ navigation }: ListsScreenProps) => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View>
-          <Text>Kjøøh</Text>
+          {shoppingLists.length > 0 &&
+            shoppingLists.map((shoppingList) => (
+              <FlatList
+                data={shoppingList}
+                renderItem={({ item }) => <Text>{item}</Text>}
+              />
+            ))}
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
