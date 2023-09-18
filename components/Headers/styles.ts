@@ -14,6 +14,15 @@ export const HeaderIconsView = styled.View`
   padding-top: 20px;
 `;
 
+export const ListHeaderIconsView = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 70px;
+  padding-top: 20px;
+`;
+
 export const HeaderTitleText = styled.Text`
   text-align: center;
   font-size: 25px;

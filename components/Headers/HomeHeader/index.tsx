@@ -1,16 +1,16 @@
 import { Pressable, View } from "react-native";
-import { HeaderIconsView, HeaderTitleText, HeaderContainer } from "./styles";
+import { HeaderIconsView, HeaderTitleText, HeaderContainer } from "../styles";
 import React from "react";
-import Menu from "../../assets/menu";
-import Plus from "../../assets/plus";
-import { HomeScreenNavigationProp } from "../../types/navigation";
+import Menu from "../../../assets/menu";
+import Plus from "../../../assets/plus";
+import { HomeScreenNavigationProp } from "../../../types/navigation";
 
 interface HeaderProps {
   newItemHandler?: () => void;
   navigation: HomeScreenNavigationProp;
 }
 
-const Header: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
+const HomeHeader: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
   return (
     <HeaderContainer style={{ height: 90 }}>
       <HeaderIconsView>
@@ -28,4 +28,4 @@ const Header: React.FC<HeaderProps> = ({ newItemHandler, navigation }) => {
     </HeaderContainer>
   );
 };
-export default Header;
+export default HomeHeader;

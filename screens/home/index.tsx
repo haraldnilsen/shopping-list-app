@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { NativeBaseProvider, Button } from "native-base";
 import ListItem from "../../components/ListItem";
-import Header from "../../components/Header";
+import Header from "../../components/Headers/HomeHeader";
 import { useState } from "react";
 import {
   styles,

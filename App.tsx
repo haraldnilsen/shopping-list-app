@@ -15,12 +15,17 @@ export default function App() {
         <NavigationContainer>
           <Drawer.Navigator>
             <Drawer.Screen
-              name="Home"
+              name="Hjem"
               component={Home}
               options={{ headerShown: false }}
             />
             <Drawer.Screen
-              name="Lists"
+              name="Tidligere Lister"
+              component={Lists}
+              options={{ headerShown: false }}
+            />
+            <Drawer.Screen
+              name="Maler"
               component={Lists}
               options={{ headerShown: false }}
             />
